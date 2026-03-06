@@ -16,13 +16,13 @@ def get_eigen_veins(frame):
    kd = dxx + dyy
    sqr = dxx*dyy-dxy**2
    dist = np.sqrt(np.maximum(kd**2 - 4*sqr,0))
-   lamda_max = (kd + spr)/2.0
+   lamda_max = (kd + sqr)/2.0
    res =cv2.normalize(lamda_max, None,0,255, cv2.NORM_MINMAX).astype(np.uint8)
    return cv2.applyColorMap(res, cv2.COLORMAP_BONE)
 while True:
   ret,frame = cap.read()
   if not ret: break
-  vein_visula = get_eigen_veins(frame)
+  vein_visul = get_eigen_veins(frame)
   cv2.setwindowProperty("viens", cv2.WINDOW_AUTOSIZE)
   cv2.imshow("viens", vein_visul)
 
