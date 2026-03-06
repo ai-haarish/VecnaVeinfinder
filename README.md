@@ -4,10 +4,16 @@
 and this is our hackathon project 
 ### credits 
  founder haarish jayakumar 
+ 
  collabrator kirubha mugilan 
+ 
  team members 
+ 
   jaya prakesh 
+  
   akilesh 
+  
   jaya prakesh chinna vidu ys
+  
   
 
