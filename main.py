@@ -28,7 +28,7 @@ while True:
   if not ret: break
   vein_visula = get_eigen_veins(frame)
   cv2.imshow("viens", vein_visula)
-  if cv2.waitkey(1) & 0xFF ==ord('q'):
+  if cv2.waitKey(1) & 0xFF ==ord('q'):
      break
 cap.release()
 cv2.destroyAllWindows()
