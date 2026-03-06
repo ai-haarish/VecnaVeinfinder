@@ -23,14 +23,15 @@ while True:
   ret,frame = cap.read()
   if not ret: break
   vein_visul = get_eigen_veins(frame)
-  cv2.setwindowProperty("viens", cv2.WINDOW_AUTOSIZE)
-  cv2.imshow("viens", vein_visul)
+  #cv2.namedWindow("veins", vein_visul)
+  cv2.imshow("veins", vein_visul)
+  cv2.setWindowProperty("veins",cv2.WND_PROP_AUTOSIZE, cv2.WINDOW_NORMAL)
+  
 
 
   if cv2.waitKey(1) & 0xFF ==ord('q'):
      break
 cap.release()
-if KeyboardInterrut():
-   cv2.destroyAllWindows()
+
 
 
