@@ -3,10 +3,6 @@ import numpy as np
 from numpy.linalg import eigh, eig
 # for installing the camera
 cap =cv2.VideoCapture(0)
-# for the full sized screen bitch
-cv2.namedWindow("Vienfinder", cv2.WINDOW_NORMAL)
-cv2.setWindowProperty("Vienfinder", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-
 
 # for the math def get_eigen_viens(frame):
 def get_eigen_veins(frame):
@@ -27,7 +23,10 @@ while True:
   ret,frame = cap.read()
   if not ret: break
   vein_visula = get_eigen_veins(frame)
-  cv2.imshow("viens", vein_visula)
+  cv2.setwindowProperty("viens", cv2.WINDOW_AUTOSIZE)
+  cv2.imshow("viens", vein_visul)
+
+
   if cv2.waitKey(1) & 0xFF ==ord('q'):
      break
 cap.release()
