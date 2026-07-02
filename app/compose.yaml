@@ -1,6 +1,6 @@
 services:
   vein-finder:
-    image: vecna-vein-finder
+    build: .
     container_name: vecna-vein-finder
 
     environment:
