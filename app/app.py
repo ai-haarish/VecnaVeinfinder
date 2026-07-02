@@ -88,7 +88,7 @@ count1_scale.bind("<Motion>", update_values)
 count2_scale.bind("<Motion>", update_values)
 
 # Start video capture
-cam = cv2.VideoCapture("http://192.168.137.218:8080/video")
+cam = cv2.VideoCapture(0)
 
 # Function to be called repeatedly for video updates
 update_frame()
